@@ -1,5 +1,10 @@
 dist: bionic
 language: node_js
+
+arch:
+ - amd64
+ - ppc64le
+ 
 node_js:
 - 12
 
@@ -27,33 +32,6 @@ env:
     - BROWSER=firefox BVER=nightly
     - BROWSER=firefox BVER=esr
     
-#ppc64le arch added
-
-    - BROWSER=chrome  BVER=stable
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=stable CHROMEEXPERIMENT=false
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=stable PLANB=forever
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=stable CHROMEEXPERIMENT=false PLANB=forever
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=beta
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=beta CHROMEEXPERIMENT=false
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=beta CHROMEEXPERIMENT=false PLANB=forever
-    - arch: ppc64le
-    - BROWSER=chrome  BVER=unstable
-    - arch: ppc64le
-    - BROWSER=firefox BVER=stable
-    - arch: ppc64le
-    - BROWSER=firefox BVER=beta
-    - arch: ppc64le
-    - BROWSER=firefox BVER=nightly
-    - arch: ppc64le
-    - BROWSER=firefox BVER=esr
-    - arch: ppc64le
-
 matrix:
   fast_finish: true
   allow_failures:
